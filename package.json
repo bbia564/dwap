@@ -17,9 +17,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "dotenv -e .env.development node scripts/start.js",
+    "build:test": "dotenv -e .env.test node scripts/build.js",
+    "build:master": "dotenv -e .env.master node scripts/build.js",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -39,5 +39,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5",
+    "dotenv-cli": "^7.4.2",
+    "react-router-dom": "^6.26.1",
+    "sass": "1.63.3",
+    "sass-loader": "12.3.0"
   }
 }
